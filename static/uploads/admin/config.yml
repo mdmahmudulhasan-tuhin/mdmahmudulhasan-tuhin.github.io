@@ -1,0 +1,29 @@
+local_backend: true
+backend:
+  name: github
+  repo: mdmahmudulhasan-tuhin/mdmahmudulhasan-tuhin.github.io
+  branch: main
+
+media_folder: "assets/media"
+public_folder: "/media"
+
+collections:
+  - name: "authors"
+    label: "Authors"
+    folder: "content/authors"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text" }
+
+  - name: "post"
+    label: "Posts"
+    folder: "content/post"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
